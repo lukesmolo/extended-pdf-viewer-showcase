@@ -1,0 +1,23 @@
+<div fxLayout="row" fxLayoutAlign="space-between">
+  <mat-card class="distance-16 mat-elevation-z8" fxFlex="40%">
+    <p>To open a PDF file in a new window or a new tag, there are two strategies:</p>
+      <ul>
+        <li>Simple open the PDF file in the new window. Most browsers deal nicely with PDF files.</li>
+        <li>Use <code>&lt;ngx-extended-pdf-viewer&gt;</code> and attach the Angular engine to the new window.</li>
+      </ul>
+  </mat-card>
+  <mat-card class="distance-16 mat-elevation-z8 progress" fxFlex="58%">
+    <mat-tab-group>
+      <mat-tab label="HTML template">
+        <markdown ngPreserveWhitespaces src="assets/simple/html.md"> </markdown>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
+
+<mat-card class="distance-16 mat-elevation-z8">
+  <button mat-raised-button color="primary" (click)="showWindow = !showWindow">show window</button>
+</mat-card>
+
+<app-window *ngIf="showWindow">
+</app-window>

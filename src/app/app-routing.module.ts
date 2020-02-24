@@ -22,6 +22,7 @@ import { ContextmenuComponent } from './contextmenu/contextmenu.component';
 import { CustomPrintDialogComponent } from './custom-print-dialog/custom-print-dialog.component';
 import { CustomToolbarComponent } from './custom-toolbar/custom-toolbar.component';
 import { DisplayOptionsComponent } from './display-options/display-options.component';
+import { OpenInWindowComponent } from './open-in-window/open-in-window.component';
 
 const routes: Routes = [
   { path: 'alternatives', component: AlternativesComponent },
@@ -46,6 +47,7 @@ const routes: Routes = [
   { path: 'troubleshooting', component: TroubleshootingComponent },
   { path: 'zoom', component: ZoomComponent },
   { path: 'custom-print-dialog', component: CustomPrintDialogComponent },
+  { path: 'open-in-window', component: OpenInWindowComponent },
   { path: '**', redirectTo: '/simple', pathMatch: 'full' }
 ];
 

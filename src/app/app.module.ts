@@ -47,6 +47,9 @@ import { CustomPrintDialogComponent } from './custom-print-dialog/custom-print-d
 import { KeyboardComponent } from './keyboard/keyboard.component';
 import { DisplayOptionsComponent } from './display-options/display-options.component';
 import { CustomToolbarComponent } from './custom-toolbar/custom-toolbar.component';
+import { WindowComponent } from './open-in-window/window.component';
+import { OpenInWindowComponent } from './open-in-window/open-in-window.component';
+import { PortalModule } from '@angular/cdk/portal';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +75,9 @@ import { CustomToolbarComponent } from './custom-toolbar/custom-toolbar.componen
     CustomPrintDialogComponent,
     KeyboardComponent,
     DisplayOptionsComponent,
-    CustomToolbarComponent
+    CustomToolbarComponent,
+    WindowComponent,
+    OpenInWindowComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +103,8 @@ import { CustomToolbarComponent } from './custom-toolbar/custom-toolbar.componen
     MatTooltipModule,
     MatProgressBarModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
-    NgxExtendedPdfViewerModule
+    NgxExtendedPdfViewerModule,
+    PortalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
